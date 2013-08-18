@@ -62,18 +62,18 @@ The main drawback is that git not great  at handling large or many changing bina
 
 <h2>Steps</h2>	
 <h3>1. Create an account at  <a href="https://github.com/">Github</a></h3>
-<p> Privacy note: git / github are public repositories and every time you upload something, your email address is attached to it.  I recommend you create a disposable email account (or use the email forwarding feature from your domain provider) for privacy and spam reasons. 
+<p>Privacy note: git / github are public repositories and every time you commit something your email address is attached to it.  I recommend you create a disposable email account (or use the email forwarding feature from your domain provider) for privacy and spam reasons. 
 </p>
 <h3>2. Install <a href="http://www.syntevo.com/smartgithg">Smartgit</a> or <a href="http://git-scm.com/">the command-line Git.</a><small> Both work across Windows, Linux and OS X.</small></h3>
 <h3>3. Create a repository</h3>
 <p>
-Read <a href="https://help.github.com/articles/user-organization-and-project-pages">this first</a>, and decide if you want a project or a user/organization page. For the rest of this post, I'll assume you want a personal page.  At Github, create a new repository (big green button) and name it username.github.io  where username is your github username. In my case the repository is called 'nonmonotonix.github.io'. By default it lives at http://nonmonotonix.github.io on the web.
+Read <a href="https://help.github.com/articles/user-organization-and-project-pages">this first</a>, and decide if you want a project or a user/organization page. For the rest of this post I'll assume you want a personal page.  At Github, create a new repository (big green button) and name it username.github.io where username is your github username. In my case the repository is called 'nonmonotonix.github.io'. By default it lives at http://nonmonotonix.github.io on the web.
 </p>
 <h3>4. Create your content</h3>
 <p>
-Two options, either use the built in editor (A bit meh. Access via Settings - Automatic pages in your repository) or roll the HTML yourself.  I'm assuming the latter. </p>
+Two options: either use the built in editor (A bit meh. Access via Settings - Automatic pages in your repository) or roll the HTML yourself.  I'm assuming the latter. </p>
 <p>
-<li>Start by intializing your repository on your computer. In Smart git: <i>Project -> Clone -> https://github.com/nonmonotonix/nonmonotonix.github.io.git</i>  (look for 'HTTPS clone URL' on your repo home page if you can't work out your setting) Remember the destination folder, that'll be the root directory of any further work.</li>
+<li>Start by intializing your repository on your computer. In Smart git: <i>Project -> Clone -> https://github.com/nonmonotonix/nonmonotonix.github.io.git</i>  (look for 'HTTPS clone URL' on your repo home page if you can't work out your URL) Remember the destination folder, that'll be the root directory of any further work.</li>
 <li>In the root, add <i>index.html</i>. Additional content lives in subfolders or as a sibling.</li>
 <li>In the root, add a text file called <i>CNAME</i> it holds the URL you want your site to appear under, "blog.nonmonotonic.org" in my case. </li>
 <li>"README.md" and "LICENSE"  should already exist - put any license/copyright notices in them. Github is the home of many open-source projects so make it clear what can and can't be reused by others.</li>
@@ -81,10 +81,11 @@ Two options, either use the built in editor (A bit meh. Access via Settings - Au
 <p>
   Once that's done, select all your files in Smartgit. From the Toolbar, Commit (takes a snapshot of the selected files), then Push (publishes to your repo).  It can take up to 10 minutes for github to make your upload available.
 </p>
-
+<p><b>Privacy note</b>: Every time you commit, your content is snapshotted. This snapshot can be retrieved by anyone. No re-writing history without deleting your repository and by then someone may already have a clone. Github pages is not for those with revisionist tendencies. The internet always remembers, not in the least thanks to <a href="http://archive.org/web/web.php">the wayback machine</a>
+</p>
 
 <h3>5. Setup DNS</h3>
-<p>Buy a domain. I've found namecheap.com to be cheap and adequate. Detailed instructions to follow, 
+<p>Buy a domain - point it to github. I've found namecheap.com to be cheap and adequate. Detailed instructions to follow, 
 <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">this will have to do for now:</a>
 </p>
 <h3>6. Caveats</h3>
