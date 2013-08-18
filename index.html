@@ -1,0 +1,92 @@
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<title>Nonmontonix</title>
+	<link rel="stylesheet" href="https://github.com/themes/minimal/stylesheets/styles.css">
+
+    <style>
+      header { color: #000000; zoom: 1.2; }
+      header h1 { margin-bottom: 5px; }
+      header h3 { color: #000000; margin-top: 20px; margin-bottom: 5px; }      
+      header p.view { margin-bottom: 5px; }
+      header p.view small { padding-top: 2px; }
+      header ul {
+        zoom: 0.7;
+        margin-top: 25px;
+      }
+      p { color: #000000;  }
+      li { color: #000000;  }
+      section p { margin-top: 10px; }
+      section h1 { margin-bottom: 15px; }
+      section h2 { margin-bottom: 10px; }
+      section h2 { margin-bottom: 10px; }
+      footer { bottom: 20px; }
+      footer p { margin-bottom: 5px; }
+      .half-width {
+        float: left;
+        width: 200px;
+        list-style: none;
+        padding: 5px;
+        margin: 7px;
+        margin-bottom: 10px;
+      }
+      .half-width h4 {
+        margin-bottom: 5px;
+      }
+      .half-width ul {
+        padding-left: 0;
+      }
+      .half-width ul li {
+        list-style: inside;
+        font-size: 15px;
+      }
+      .clear-fix {
+        clear: both;
+      }
+    </style>
+    <script src="https://github.com/themes/minimal/javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body>
+<h1>Nonmonotonix</h1>
+<h2>Getting started with pages.github.com</h2>
+<h5>2013-08-18</h5>
+<p>
+Last week's been a flashback to 1996 – people asking me how I'd publish a personal webpage. This post is for their convenience. 
+<br>
+As a tight-fisted startup survivor these days I’m defaulting to pages.github.com. It’s free, fast, has no ads, you get to use it with your own domain and it forces you into the good habit of putting your site under source control.  The latter is a system that keeps every version of your work and lets you jump back if desired.  The tool used for this is called 'git', it's aimed at programmers, but thanks to Syntevo's brilliant <a href="http://www.syntevo.com/smartgithg">Smartgit</a> UI it very easy to get started. Free for non-commercial use, cheap otherwise.
+</p>
+<p>
+The main drawback is that git not great  at handling large or many changing binaries (non-text files) the performance of working with git will deteriorate, so if you plan on having a lot of images, host your images elsewhere and link to them from your HTML.
+</p>
+
+<h2>Steps</h2>	
+<h3>1. Create an account at  <a href="https://github.com/">Github</a></h3>
+<h3>2. Install <a href="http://www.syntevo.com/smartgithg">Smartgit</a> or <a href="http://git-scm.com/">the command-line Git.</a><small> Both work across Windows, Linux and OS X.</small></h3>
+<h3>3. Create a repository</h3>
+<p>
+Read <a href="https://help.github.com/articles/user-organization-and-project-pages">this first</a>, and decide if you want a project or a user/organization page. For the rest of this post, I'll assume you want a personal page.  At Github, create a new repository (big green button) and name it username.github.io  where username is your github username. In my case the repository is called 'nonmonotonix.github.io'. By default it lives at http://nonmonotonix.github.io on the web.
+</p>
+<h3>4. Create your content</h3>
+<p>
+Two options, either use the built in editor (A bit meh. Access via Settings - Automatic pages in your repository) or roll the HTML yourself.  I'm assuming the latter. </p>
+<p>
+<li>Start by intializing your repository on your computer. In Smart git: <i>Project -> Clone -> https://github.com/nonmonotonix/nonmonotonix.github.io.git</i>  (look for 'HTTPS clone URL' on your repo home page if you can't work out your setting) Remember the destination folder, that'll be the root directory of any further work.</li>
+<li>In the root, add <i>index.html</i>. Additional content lives in subfolders or as a sibling.</li>
+<li>In the root, add a text file called <i>CNAME</i> it holds the URL you want your site to appear under, "blog.nonmonotonic.org" in my case. </li>
+<li>"README.md" and "LICENSE"  should already exist - put any license/copyright notices in them. Github is the home of many open-source projects so make it clear what can and can't be reused by others.</li>
+</p>
+<p>
+  Once that's done, select all your files in Smartgit. From the Toolbar, Commit (takes a snapshot of the selected files), then Push (publishes to your repo).  It can take up to 10 minutes for github to make your upload available.
+</p>
+
+
+<h3>5. Setup DNS</h3>
+<p>Buy a domain. I've found namecheap.com to be cheap and adequate. Detailed instructions to follow, 
+<a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">this will have to do for now:</a>
+</p>
+<h3>6. Caveats</h3>
+<li>I've not worked out if there are any SEO implications to hosting on pages.github.com</li>
+<li>By design and default everything on github is public and trivally downloaded.</li>
+</p>
+</body>
