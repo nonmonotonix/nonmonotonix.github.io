@@ -1,0 +1,62 @@
+---
+layout: post
+title: "Getting started with pages.github.com"
+date: 2013-08-18 15:09
+comments: false
+categories: [hosting, free, github]
+---
+Last week's been a flashback to 1996 – people asking me how I'd publish a personal webpage. This post is for their convenience. 
+
+These days I’m defaulting to pages.github.com. It’s free, fast, has no ads and you get to use it with your own domain. This blog runs off it.
+
+Because it only hosts static HTML pages there is no database or application to worry about. Your security worries are limited to keeping your account credentials secure and hoping that Github keeps their server adequately patched and doesn't get whacked with a denial of service attack.  Finally, it forces you into the good habit of putting your site under source control.  The latter is a system that keeps every version of your work and lets you jump back if desired. It also solves the problem of getting your files onto the server.  The free tool used for this is called 'git' - it's aimed at programmers but thanks to Syntevo's brilliant <a href="http://www.syntevo.com/smartgithg">Smartgit</a> UI it very easy to get started. Free for non-commercial use, cheap otherwise.
+
+As a final benefit from using git, you'll have a full historical backup on your local disk.
+
+The main drawback is that git not great at handling large or many changing binaries (non-text files) the performance of working with git will deteriorate as your repository gets bloated. If you plan on having a lot of images, host your images elsewhere and link to them from your HTML.
+
+For a newcomer to Git, Github and HTML it might be a lot to absorb. If you're technically inclined you'll appreciate the simplicity once you get the hang of the tools.
+
+##Steps
+
+###1. Create an account at  <a href="https://github.com/">Github</a>
+Privacy note: git / github are public repositories and every time you commit something your email address is attached to it.  I recommend you create a disposable email account (or use the email forwarding feature from your domain provider) for privacy and spam reasons. 
+
+###2. Install <a href="http://www.syntevo.com/smartgithg">Smartgit</a> or <a href="http://git-scm.com/">the command-line Git.</a>
+Both work across Windows, Linux and OS X.
+
+###3. Create a repository
+
+Read <a href="https://help.github.com/articles/user-organization-and-project-pages">this first</a> and decide if you want a project or a user/organization page. For the rest of this post I'll assume you want personal pages.  At Github, create a new repository (big green button) and name it <i>username.github.io</i> where <i>username</i> is your github username. In my case the repository is called 'nonmonotonix.github.io'. By default it lives at <a href="http://nonmonotonix.github.io">http://nonmonotonix.github.io</a> on the web.
+
+
+###4. Create your content
+
+Three options: either use the built in editor (A bit meh but very easy. Access via Settings - Automatic pages in your repository), use a blog to static pages convertor like <a href="http://jekyllrb.com/">Jekyll</a>  or roll some basic HTML yourself.  I'm assuming the latter. 
+
+This post was originally written in plain HTML but I've moved on to <a href="http://octopress.org/">octopress</a>, which extends Jekyll nicely for code blogging. Another neat benefit is that you write posts using markdown rather than html markup.  Markdown inverts the audience. In a markup language you put tags all over the shop to help the computer interpret the file. In markdown you write in plain text, occasionally sprinkling some tags to leverage features. Markdown is as easy to read as it is to write. Productivity & maintainbility win.
+
+* Start by initializing your repository on your computer. In Smart git: <i>Project -> Clone -> https://github.com/nonmonotonix/nonmonotonix.github.io.git</i>  (look for 'HTTPS clone URL' on your repo home page if you can't work out your URL) Remember the destination folder, that'll be the root directory of any further work.
+
+* In the root, add <i>index.html</i>. Additional content lives in subfolders or as a sibling.
+
+* In the root, add a text file called <i>CNAME</i> it holds the URL you want your site to appear under, "blog.nonmonotonic.org" in my case.  Without this file, your custom domain won't work, but your pages will still be accessible via <a href="http://nonmonotonix.github.io">http://nonmonotonix.github.io</a>
+
+
+* "README.md" and "LICENSE"  should already exist - put any license/copyright notices in them. Github is the home of many open-source projects so make it clear what can and can't be reused by others.
+
+
+Once that's done, select all your files in Smartgit. From the Toolbar, Commit (takes a snapshot of the selected files), then Push (publishes all snapshot to your repo).  It can take up to 10 minutes for github to make your upload available. The end result should look like http://jekyllrb.com/
+
+*Privacy note*: Every time you commit, your content is snapshotted. This snapshot can be retrieved by anyone. No re-writing history without deleting your repository and by then someone may already have a clone. Github pages is not for those with revisionist tendencies. The internet always remembers, not in the least thanks to <a href="http://archive.org/web/web.php">the wayback machine</a>, Google cache and of course <a href="http://www.nsa.gov/">Team "Intercept All The Things"</a>.
+
+
+###5. Setup DNS
+Buy a domain - point it to github. I've found namecheap.com to be cheap and gives adequate levels of control over your domain, including email aliasses and lets you control all the key DNS records. Detailed instructions to follow, 
+<a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">this will have to do for now:</a>
+
+###6. Caveats
+* I've not worked out if there are any SEO implications to hosting on pages.github.com
+* By design and default everything on github is public and trivally downloadable.
+
+
